@@ -1,0 +1,13 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+ name: windows-11-source
+spec:
+ source:
+   http:
+     url: "http://httpd-server.cluster-services.svc.cluster.local:8080/Win11_25H2_English_x64.iso"
+ storage:
+   volumeMode: Filesystem
+   resources:
+     requests:
+       storage: 10Gi
