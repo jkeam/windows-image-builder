@@ -2,6 +2,8 @@ apiVersion: cdi.kubevirt.io/v1beta1
 kind: DataVolume
 metadata:
  name: windows-11-source
+ annotations:
+    cdi.kubevirt.io/storage.bind.immediate.requested: "true"
 spec:
  source:
    http:
